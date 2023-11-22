@@ -68,10 +68,12 @@ async function checkWeather(city) {
       }
       
   }
-
+  
   intervalId = setInterval(getNewData, 3000);
   console.log(intervalId)
   document.addEventListener('keydown', stopIntervalOnEnter);
+
+
 }
 searchBox.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
