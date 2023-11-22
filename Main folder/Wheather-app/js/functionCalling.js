@@ -1,4 +1,4 @@
-console.log("Weather Forecasting");
+console.log("Weather Forecastingh");
 
 const accessKey = "cd30f1a9ce633ffb26c52f75891bed55";
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
