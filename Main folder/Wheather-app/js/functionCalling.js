@@ -1,4 +1,4 @@
-console.log("Weather Forecastingh");
+console.log("Weather Forecasting");
 
 const accessKey = "cd30f1a9ce633ffb26c52f75891bed55";
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
@@ -58,7 +58,7 @@ async function checkWeather(city) {
       }
       let a = fetchApi()
       console.log(a)
-    }
+}
 
     let intervalId;
     function stopIntervalOnEnter(event) {
@@ -80,3 +80,4 @@ searchBox.addEventListener("keydown", (event) => {
       checkWeather(searchBox.value);
     }
 });
+
