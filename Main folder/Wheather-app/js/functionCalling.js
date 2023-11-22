@@ -50,6 +50,30 @@ async function checkWeather(city) {
         }
         return "";
     }
+    function getNewData(){
+      async function fetchApi(){
+          const response = await fetch(baseURL + city + `&appid=${accessKey}`);
+          const data = await response.json();
+          return data
+      }
+      let a = fetchApi()
+      console.log(a)
+}
+
+    let intervalId;
+    function stopIntervalOnEnter(event) {
+      if (event.key === 'Enter') {
+          clearInterval(intervalId);
+          document.removeEventListener('keydown', stopIntervalOnEnter);
+      }
+      
+  }
+  
+  intervalId = setInterval(getNewData, 3000);
+  console.log(intervalId)
+  document.addEventListener('keydown', stopIntervalOnEnter);
+
+
 }
 searchBox.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
